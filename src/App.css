@@ -1,0 +1,35 @@
+.reg_page{
+ width: 50%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%);
+}
+.reg{
+  position: relative;
+}
+.btn{
+  width: 100%;
+  background-color: rgb(124, 124, 184)!important;
+}
+
+.error{
+  width: 100%;
+  background-color: rgb(177, 96, 96);
+  padding: 5px;
+  color: white;
+}
+
+.account{
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.account_message{
+  background-color: rgba(91, 151, 91, 0.857);
+  padding: 5px;
+  border-radius: 5px;
+}
