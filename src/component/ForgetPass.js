@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import axios from 'axios'
 import { Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+
 
 const ForgetPass = () => {
-    const history = useHistory();
+
     const [email, setemail] = useState();
     const [errors, seterror] = useState(null)
-    const [datas, setdata] = useState([])
+
     const emailFunction = (e) => {
         setemail(e.target.value)
     }
