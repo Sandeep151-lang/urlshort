@@ -23,7 +23,7 @@ const Login = () => {
     const register = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('http://localhost:4000/login', { email, password })
+            const res = await axios.post('https://urlshorterning.herokuapp.com/login', { email, password })
             if (res) {
                 setdata(res.data.message)
                 history.push('/home');

@@ -12,7 +12,7 @@ const Login = () => {
 
 
 
- 
+
 
   const passFunc = (e) => {
     setpassword(e.target.value);
@@ -21,9 +21,9 @@ const Login = () => {
   const register = async (e) => {
     e.preventDefault()
     try {
-      const res = await axios.post('http://localhost:4000/password', { password,email,token })
-      if (res.status===200) {
-        
+      const res = await axios.post('https://urlshorterning.herokuapp.com/password', { password, email, token })
+      if (res.status === 200) {
+
         seterror(res.data)
         //history.push('/home');
       }
@@ -38,7 +38,7 @@ const Login = () => {
     <form className='reg_page'>
       <h3 className='text-center'>Change Password</h3>
       <hr />
-    
+
       <div className="mb-3">
         <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
         <input type="password" className="form-control" id="exampleInputPassword1" placeholder='Enter Password' onChange={passFunc} />

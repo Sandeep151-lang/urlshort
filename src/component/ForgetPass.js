@@ -13,19 +13,19 @@ const ForgetPass = () => {
     }
 
 
-   
+
     const register = async (e) => {
         e.preventDefault()
         try {
-            const res = await axios.post('http://localhost:4000/forget', { email })
+            const res = await axios.post('https://urlshorterning.herokuapp.com/forget', { email })
             if (res) {
                 //setdata(res.data.message)
-               // history.push('/home');
-        
+                // history.push('/home');
+
                 seterror(res.data)
             }
         } catch (error) {
-           
+
             seterror(error.response.data)
         }
     }

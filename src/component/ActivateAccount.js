@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
@@ -8,11 +8,11 @@ const ActivateAccount = () => {
     const [error, seterror] = useState(null)
 
     const { email, token } = useParams();
-    const get =async () => {
+    const get = async () => {
         try {
-            const res = await axios.get(`http://localhost:4000/${email}/${token}`);
+            const res = await axios.get(`https://urlshorterning.herokuapp.com/${email}/${token}`);
             if (res.status === 200) {
-                
+
                 seterror(res.data)
             }
         } catch (error) {
@@ -21,7 +21,7 @@ const ActivateAccount = () => {
         }
     }
     useEffect(() => {
-     get()
+        get()
     }, [])
     return (
         <div className='account'>
