@@ -1,10 +1,12 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom';
 
 const HomePage = () => {
-    const user = JSON.parse(localStorage.getItem('user'));
-
-    return
+    return (
+        <div>
+            <h1>Homepage</h1>
+        </div>
+    )
 }
 
 export default HomePage
+
