@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<title>Title</title>
+<style>
+    .head{
+        width: 100%;
+        height: 50vh;
+    }
+    .board{
+        width: 50%;
+        background-color: white;
+        margin-top: 100px;
+    }
+    .btn{
+        width: 50%;
+        background-color: rgb(124, 124, 184);
+        padding: 15px 12px;
+        font-weight: bolder;
+        border-radius: 8px ;
+    }
+   a{
+       cursor: pointer!important;
+   }
+   a:hover{
+       cursor: pointer!important;
+   }
+    .heading{
+        text-align: center;
+        font-size: 5vmin;
+    }
+    @media only screen and (max-width: 720px) {
+            .btn{
+                width: 100%;
+                padding: 10px 8px;
+            }
+}
+</style>
+</head>
+<body>
+    <div class="head">
+       <center><div class="board">
+            <h1 class="heading">Please Activate</h1>
+            {{layout}}
+            <a href="http://www.google.com"><button class="btn">Activate</button></a>
+        </div>
+       </center>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
+</body>
+</html>
