@@ -75,7 +75,7 @@ const HomePage = () => {
                 <input type="text" className="form-control" placeholder='Enter Link' onChange={suburl} />
                 <button className="btn-click" onClick={short}>Click</button>
                 <br />
-                <h4>current Url <a href={value} target="_blank">{value}</a></h4>
+                <h4>current Url <a href={value} target="_blank" rel="noreferrer">{value}</a></h4>
 
             </div>
             <div className='container'>
@@ -95,7 +95,7 @@ const HomePage = () => {
                                 return <>
                                     <tr key={key}>
                                         <th scope="row">{key + 1}</th>
-                                        <td> <a href={item.value} target="_blank">{item.value}</a></td>
+                                        <td> <a href={item.value} target="_blank" rel="noreferrer">{item.value}</a></td>
                                     </tr>
                                 </>
                             })
