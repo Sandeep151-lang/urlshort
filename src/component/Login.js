@@ -26,14 +26,13 @@ const Login = () => {
             const res = await axios.post('https://urlshorterning.herokuapp.com/login', { email, password })
             if (res) {
                 setdata(res.data.message)
-                history.push('/home');
+                history.push(`/home/${email}`);
             }
         } catch (error) {
-            seterror(error.response.data.message)
+            seterror(error.response.data.message);
         }
     }
-
-    window.localStorage.setItem('user', JSON.stringify(datas))
+    console.log(datas)
 
     return (
         <form className='reg_page'>
