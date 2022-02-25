@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
+//import { useHistory } from 'react-router-dom';
 
 const HomePage = () => {
 
-    const history = useHistory();
+    //const history = useHistory();
     const [input, setinput] = useState("");
     const [value, setvalue] = useState("")
     const [geturl, setgeturl] = useState([])
@@ -19,7 +19,7 @@ const HomePage = () => {
             setuser(res.data)
         } catch (error) {
             console.log(error)
-            history.push("/login")
+            // history.push("/login")
         }
     }
 
