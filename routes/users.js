@@ -4,6 +4,7 @@ const userSchema = require('../model/userSchema')
 var bcrypt = require('bcrypt');
 var jwt = require('jsonwebtoken')
 const nodemailer = require("nodemailer");
+const urlshort = require('../model/url');
 var hbs = require('nodemailer-express-handlebars');
 /* GET users listing. */
 
@@ -41,7 +42,7 @@ router.post('/register', async (req, res, next) => {
           to: email,
           subject: 'Please Activate Your Account',
           // template: 'main',
-          html: `<div style='width:100%; height:50vh'><center><div style='width:50%; background-color:white; margin-top:100px'><h1 style='text-align:center'>Please Activate</h1><a style='cursor:pointer' href=http://localhost:3000/${email}/${older_token}><button style='width:50%; background-color:rgb(124, 124, 184); padding:13px 12px; font-weight:bolder; border-radius:8px'>Activate</button></a></div></center></div>`
+          html: `<div style='width:100%; height:50vh'><center><div style='width:50%; background-color:white; margin-top:100px'><h1 style='text-align:center'>Please Activate</h1><a style='cursor:pointer' href=https://urlshorterning.herokuapp.com/${email}/${older_token}><button style='width:50%; background-color:rgb(124, 124, 184); padding:13px 12px; font-weight:bolder; border-radius:8px'>Activate</button></a></div></center></div>`
 
         };
         transporter.sendMail(mailOptions, function (error, info) {
@@ -205,6 +206,28 @@ router.post('/password', async (req, res) => {
   }
 })
 
+
+router.post('/url', async (req, res) => {
+  const { value } = req.body
+  console.log(value)
+
+  try {
+    const use = new urlshort({ value: value })
+    await use.save();
+    return res.status(200).json(value)
+  } catch (error) {
+    return res.status(400).json(error)
+  }
+})
+
+
+
+
+router.get('/geturl', async (req, res) => {
+  await urlshort.find().then((doc) => {
+    return res.status(200).json(doc)
+  })
+})
 
 
 module.exports = router;
