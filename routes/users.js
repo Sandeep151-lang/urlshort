@@ -161,7 +161,7 @@ router.post('/forget', async (req, res) => {
             to: email,
             subject: 'Change Password',
             // template: 'main',
-            html: `<div style='width:100%; height:50vh'><center><div style='width:50%; background-color:white; margin-top:100px'><h1 style='text-align:center'>Change Password</h1><a style='cursor:pointer' href=http://localhost:3000/update/${older_token}/${email}><button style='width:50%; background-color:rgb(124, 124, 184); padding:13px 12px; font-weight:bolder; border-radius:8px'>Password</button></a></div></center></div>`
+            html: `<div style='width:100%; height:50vh'><center><div style='width:50%; background-color:white; margin-top:100px'><h1 style='text-align:center'>Change Password</h1><a style='cursor:pointer' href=https://stoic-lovelace-33307d.netlify.app/update/${older_token}/${email}><button style='width:50%; background-color:rgb(124, 124, 184); padding:13px 12px; font-weight:bolder; border-radius:8px'>Password</button></a></div></center></div>`
           };
           transporter.sendMail(mailOptions, function (error, info) {
             if (error) {
