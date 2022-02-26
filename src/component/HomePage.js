@@ -22,7 +22,7 @@ const HomePage = () => {
             // history.push("/login")
         }
     }
-
+    console.log(geturl)
 
 
     const short = async () => {
@@ -78,31 +78,7 @@ const HomePage = () => {
                 <h4>current Url <a href={value} target="_blank" rel="noreferrer">{value}</a></h4>
 
             </div>
-            <div className='container'>
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Url</th>
 
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {
-                            geturl.map((item, key) => {
-                                console.log(item.value)
-                                return <>
-                                    <tr key={key}>
-                                        <th scope="row">{key + 1}</th>
-                                        <td> <a href={item.value} target="_blank" rel="noreferrer">{item.value}</a></td>
-                                    </tr>
-                                </>
-                            })
-                        }
-                    </tbody>
-                </table>
-            </div>
         </>
     )
 }
