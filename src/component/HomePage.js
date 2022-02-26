@@ -47,7 +47,7 @@ const HomePage = () => {
 
     const count = async () => {
         try {
-            const res = await axios.get('https://urlshorterning.herokuapp.com/geturl');
+            const res = await axios.get('https://urlshorterning.herokuapp.com/getur');
             setgeturl(res.data)
 
         } catch (error) {
