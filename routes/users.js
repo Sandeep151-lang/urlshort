@@ -42,7 +42,7 @@ router.post('/register', async (req, res, next) => {
           to: email,
           subject: 'Please Activate Your Account',
           // template: 'main',
-          html: `<div style='width:100%; height:50vh'><center><div style='width:50%; background-color:white; margin-top:100px'><h1 style='text-align:center'>Please Activate</h1><a style='cursor:pointer' href=https://urlshorterning.herokuapp.com/${email}/${older_token}><button style='width:50%; background-color:rgb(124, 124, 184); padding:13px 12px; font-weight:bolder; border-radius:8px'>Activate</button></a></div></center></div>`
+          html: `<div style='width:100%; height:50vh'><center><div style='width:50%; background-color:white; margin-top:100px'><h1 style='text-align:center'>Please Activate</h1><a style='cursor:pointer' href=https://stoic-lovelace-33307d.netlify.app/${email}/${older_token}><button style='width:50%; background-color:rgb(124, 124, 184); padding:13px 12px; font-weight:bolder; border-radius:8px'>Activate</button></a></div></center></div>`
 
         };
         transporter.sendMail(mailOptions, function (error, info) {
