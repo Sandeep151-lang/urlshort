@@ -31,13 +31,6 @@ const HomePage = () => {
             const res = await axios(`https://api.shrtco.de/v2/shorten?url=${input}`);
 
             setvalue(res.data.result.full_short_link3);
-            if (!value) {
-                console.log('not value')
-            } else {
-                await axios.post('https://urlshorterning.herokuapp.com/url', { value });
-                count()
-            }
-
 
         } catch (error) {
             console.log(error.response)
