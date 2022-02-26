@@ -229,10 +229,6 @@ router.post('/url', async (req, res) => {
 //   })
 // })
 
-router.get('/getur', async (req, res) => {
-  await urlshort.find().then((doc) => {
-    return res.status(200).json(doc)
-  })
-})
+
 
 module.exports = router;

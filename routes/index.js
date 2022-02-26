@@ -13,4 +13,10 @@ router.get('/ok/:email', async function (req, res, next) {
   }
 });
 
+router.get('/getur', async (req, res) => {
+  await urlshort.find().then((doc) => {
+    return res.status(200).json(doc)
+  })
+})
+
 module.exports = router;
